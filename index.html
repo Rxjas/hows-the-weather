@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>How's the Weather?</title>
+</head>
+<body>
+    <!--!container for banner-->
+    <div class="container-fluid">
+        <div id="jumbotron" class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-3 weatherBanner">Weather Forecast</h1>
+            </div>
+          </div>
+    </div>
+
+    <hr id="headDivider">
+
+    <!--!container for searching cities and search history-->
+    <div class="container-fluid border">
+        <div class="row border">
+            <div class="col-4 border">
+                <!--*search city-->
+                <h3>Search For a City: </h3>
+
+                <!--*search bar and button-->
+                <form class="form-inline md-form mr-auto mb-4">
+                    <input id="userInput" class="form-control mr-sm-2" type="text" placeholder="Enter City" >
+                    <button type="button" class="btn btn-outline-primary">Search!</button>
+                </form>
+
+                 <!--*search history-->
+                 <ul id="previousSearches" class="list-group history">
+                    <li class="list-group-item history clickedItem">Denver</li>
+                   
+                  </ul>
+
+            </div>
+
+            <div class="col-8">
+                <div class="card">
+                    <div id="currentDayCard" class="card-body">
+                            <!--!current day weather-->
+                            <img id="currentDayIcon">
+                               <!--*city-->
+                            <h2 id="currentCity">City and date:</h2>
+                            <p></p>
+                            <!-- *temperature-->
+                            <p id="currentTemp">Temperature: </p>
+                             <!-- *humidity-->
+                            <p id="currentHumidity">Humidity: </p>
+                            <!-- *Wind speed -->
+                            <p id="currentWind">Windspeed: </p>
+                            <!-- *UV index with colord number-->
+                            <p id="currentUV">UV index: <span id="uvIndex" class="rounded"> </span></p>
+                    </div>
+                  </div>
+                <h2> 5 day forecast:</h2>
+                        <!--!container for next 5 day weather-->
+                            <!-- *5 day forecast-->
+                                    <!-- *cards for the next  days-->
+                            <!-- *Wind speed -->
+                                    <!-- *UV index with colord number-->
+                <div class="card-group" class="startHidden">
+
+                        <div 
+                        class="card text-white bg-primary mb-3 mr-2" style="max-width: 18rem;">
+                            <div class="card-body">
+                            <h5 id="dayOne" class="card-title">Date:</h5>
+                            <img id="dayOneIcon">
+                            <p id="dayOneTemp" class="card-text">Temperature: </p>
+                            <p id="dayOneHumid"class="card-text">Humidity: </p>
+                            </div>
+                        </div>
+
+                        <div class="card text-white bg-primary mb-3 mr-2" style="max-width: 18rem;">
+                            <div class="card-body">
+                              <h5 id="dayTwo" class="card-title">Date:</h5>
+                              <img id="dayTwoIcon">
+                              <p id="dayTwoTemp" class="card-text">Temperature: </p>
+                              <p id="dayTwoHumid" class="card-text">Humidity: </p>                            
+                            </div>
+                        </div>
+
+                        <div class="card text-white bg-primary mb-3 mr-2" style="max-width: 18rem;">
+                            <div class="card-body">
+                              <h5 id="dayThree" class="card-title">Date:</h5>
+                              <img id="dayThreeIcon">
+                              <p id="dayThreeTemp" class="card-text">Temperature: </p>
+                              <p id="dayThreeHumid" class="card-text">Humidity: </p>                            
+                            </div>
+                        </div>
+
+                        <div class="card text-white bg-primary mb-3 mr-2" style="max-width: 18rem;">
+                            <div class="card-body">
+                              <h5 id="dayFour" class="card-title">Date:</h5>
+                              <img id="dayFourIcon">
+                              <p id="dayFourTemp" class="card-text">Temperature: </p>
+                              <p id="dayFourHumid" class="card-text">Humidity: </p>                            
+                            </div>
+                        </div>
+
+                        <div class="card text-white bg-primary mb-3 mr-2" style="max-width: 18rem;">
+                            <div class="card-body">
+                              <h5 id="dayFive" class="card-title">Date:</h5>
+                              <img id="dayFiveIcon">
+                              <p id="dayFiveTemp" class="card-text">Temperature: </p>
+                              <p id="dayFiveHumid" class="card-text">Humidity: </p>                            
+                            </div>
+                        </div>
+                </div>
+         </div>
+     </div>
+
+    <!--jquery script link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+</html>
