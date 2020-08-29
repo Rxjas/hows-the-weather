@@ -12,7 +12,7 @@ $(document).ready(function(){
    $('ul').on('click','.list-group-item', function clickHistory(event){
         searchCitiesTwo();
         makeEverythingAppear();
-  })
+   })
 
          //function to build the URL need to search for a city
         function buildURL(citySearch){
@@ -30,26 +30,27 @@ $(document).ready(function(){
         }
       
 
-    //get the input for the user and add to list
-    function saveSearch(){
-        var city = $("#userInput").val().trim();
-        var historyListItem = $('<li>')
+        //get the input for the user and add to list
+        function saveSearch(){
+            var city = $("#userInput").val().trim();
+            var historyListItem = $('<li>')
 
-        historyListItem.attr('class', 'list-group-item ')
-        historyListItem.attr('value', city)
-        historyListItem.text(city)
-        $('#previousSearches').prepend(historyListItem);
-        } 
-        
-    function usersLastSearch(){
-      let lastSearch = localStorage.getItem('lastSearch')
-      $('#latestSearch').text(lastSearch)
-      $('#latestSearch').attr('value', lastSearch)
+            historyListItem.attr('class', 'list-group-item ')
+            historyListItem.attr('value', city)
+            historyListItem.text(city)
+            $('#previousSearches').prepend(historyListItem);
+            } 
+            
+        function usersLastSearch(){
+        let lastSearch = localStorage.getItem('lastSearch')
+        $('#latestSearch').text(lastSearch)
+        $('#latestSearch').attr('value', lastSearch)
 
-    }
-    function makeEverythingAppear(){
-        $('*').removeClass('startHidden')
-    }
+        }
+
+        function makeEverythingAppear(){
+            $('*').removeClass('startHidden')
+        }
 
 
 
@@ -60,8 +61,6 @@ $(document).ready(function(){
             method: 'GET'
           })
           .then(function(response){
-              //*console log of city API
-        //    console.log(response)
            var cityResponse = response
            let cityLat = response.city.coord.lat
            let cityLon = response.city.coord.lon
@@ -75,8 +74,6 @@ $(document).ready(function(){
                     url: queryURL,
                     method: 'GET'
                 }).then(function(response){
-                    // *console.log of second API and adding the current day data
-                    // console.log(response)
                      $('#currentTemp').text('Temperature (F): ' + response.current.temp);
                      $('#currentHumidity').text('Humidity: ' + response.current.humidity);
                      $('#currentWind').text('Windspeed: ' + response.current.wind_speed);
@@ -203,8 +200,6 @@ $(document).ready(function(){
             method: 'GET'
           })
           .then(function(response){
-              //*console log of city API
-        //    console.log(response)
            var cityResponse = response
            let cityLat = response.city.coord.lat
            let cityLon = response.city.coord.lon
@@ -218,8 +213,6 @@ $(document).ready(function(){
                     url: queryURL,
                     method: 'GET'
                 }).then(function(response){
-                    // *console.log of second API and adding the current day data
-                    // console.log(response)
                      $('#currentTemp').text('Temperature (F): ' + response.current.temp);
                      $('#currentHumidity').text('Humidity: ' + response.current.humidity);
                      $('#currentWind').text('Windspeed: ' + response.current.wind_speed);
@@ -334,10 +327,6 @@ $(document).ready(function(){
 
 
                 })
-         
-           //*change the current display using the 2nd API
-        
           });
     };
-  
   })
