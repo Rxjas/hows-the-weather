@@ -5,11 +5,13 @@ $(document).ready(function(){
     $('button').on('click', function(){
         searchCities();
         saveSearch();
+        makeEverythingAppear();
     });
 
    //When you click on a search item is pulls up
    $('ul').on('click','.list-group-item', function clickHistory(event){
         searchCitiesTwo();
+        makeEverythingAppear();
   })
 
          //function to build the URL need to search for a city
@@ -44,6 +46,9 @@ $(document).ready(function(){
       $('#latestSearch').text(lastSearch)
       $('#latestSearch').attr('value', lastSearch)
 
+    }
+    function makeEverythingAppear(){
+        $('*').removeClass('startHidden')
     }
 
 

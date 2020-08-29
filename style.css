@@ -35,12 +35,8 @@
   }
 
   #currentDayCard{
-      background-color: rgba(28, 154, 204, 0.801);
+      background-color: #007bff;;
   }
-
-  /* #currentUV{
-      text-decoration-line: underline;
-  } */
 
   .favorable{
     background-color: lightgreen;
@@ -52,4 +48,15 @@
 
   .severe{
     background-color: rgb(231, 36, 29);
+  }
+
+  .startHidden{
+      visibility: hidden;
+  }
+
+  #fiveDayForecast{
+    color: white;
+  }
+  #searchForACity{
+        color: white;
   }

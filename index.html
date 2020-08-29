@@ -20,11 +20,11 @@
     <hr id="headDivider">
 
     <!--!container for searching cities and search history-->
-    <div class="container-fluid border">
-        <div class="row border">
+    <div class="container-fluid">
+        <div class="row ">
             <div class="col-4 border">
                 <!--*search city-->
-                <h3>Search For a City: </h3>
+                <h3 id="searchForACity">Search For a City: </h3>
 
                 <!--*search bar and button-->
                 <form class="form-inline md-form mr-auto mb-4">
@@ -41,12 +41,12 @@
             </div>
 
             <div class="col-8">
-                <div class="card">
+                <div class="card ">
                     <div id="currentDayCard" class="card-body">
                             <!--!current day weather-->
                             <img id="currentDayIcon">
                                <!--*city-->
-                            <h2 id="currentCity">City and date:</h2>
+                            <h2 id="currentCity">City and Date: </h2>
                             <p></p>
                             <!-- *temperature-->
                             <p id="currentTemp">Temperature: </p>
@@ -58,16 +58,13 @@
                             <p id="currentUV">UV index: <span id="uvIndex" class="rounded"> </span></p>
                     </div>
                   </div>
-                <h2> 5 day forecast:</h2>
+                <h2 id="fiveDayForecast" class="startHidden"> 5 day forecast:</h2>
+
                         <!--!container for next 5 day weather-->
-                            <!-- *5 day forecast-->
-                                    <!-- *cards for the next  days-->
-                            <!-- *Wind speed -->
-                                    <!-- *UV index with colord number-->
                 <div class="card-group" class="startHidden">
 
-                        <div 
-                        class="card text-white bg-primary mb-3 mr-2" style="max-width: 18rem;">
+                         <div 
+                         class="card text-white bg-primary mb-3 mr-2 startHidden" style="max-width: 18rem;">
                             <div class="card-body">
                             <h5 id="dayOne" class="card-title">Date:</h5>
                             <img id="dayOneIcon">
@@ -76,16 +73,16 @@
                             </div>
                         </div>
 
-                        <div class="card text-white bg-primary mb-3 mr-2" style="max-width: 18rem;">
+                        <div class="card text-white bg-primary mb-3 mr-2 startHidden" style="max-width: 18rem;">
                             <div class="card-body">
-                              <h5 id="dayTwo" class="card-title">Date:</h5>
+                              <h5 id="dayTwo" class="card-title startHidden">Date:</h5>
                               <img id="dayTwoIcon">
                               <p id="dayTwoTemp" class="card-text">Temperature: </p>
                               <p id="dayTwoHumid" class="card-text">Humidity: </p>                            
                             </div>
                         </div>
 
-                        <div class="card text-white bg-primary mb-3 mr-2" style="max-width: 18rem;">
+                        <div class="card text-white bg-primary mb-3 mr-2 startHidden" style="max-width: 18rem;">
                             <div class="card-body">
                               <h5 id="dayThree" class="card-title">Date:</h5>
                               <img id="dayThreeIcon">
@@ -94,7 +91,7 @@
                             </div>
                         </div>
 
-                        <div class="card text-white bg-primary mb-3 mr-2" style="max-width: 18rem;">
+                        <div class="card text-white bg-primary mb-3 mr-2 startHidden" style="max-width: 18rem;">
                             <div class="card-body">
                               <h5 id="dayFour" class="card-title">Date:</h5>
                               <img id="dayFourIcon">
@@ -103,7 +100,7 @@
                             </div>
                         </div>
 
-                        <div class="card text-white bg-primary mb-3 mr-2" style="max-width: 18rem;">
+                        <div class="card text-white bg-primary mb-3 mr-2 startHidden" style="max-width: 18rem;">
                             <div class="card-body">
                               <h5 id="dayFive" class="card-title">Date:</h5>
                               <img id="dayFiveIcon">
